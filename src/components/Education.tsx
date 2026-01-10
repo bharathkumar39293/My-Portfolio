@@ -17,7 +17,6 @@ const Education: React.FC = () => {
                             <p className="text-slate-400 font-medium mb-2">{edu.institution}</p>
                             <div className="flex justify-between text-sm text-slate-500">
                                 <span>{edu.period}</span>
-                                <span>{edu.details}</span>
                             </div>
                         </div>
                     ))}

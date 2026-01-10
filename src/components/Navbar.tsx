@@ -41,8 +41,8 @@ const Navbar: React.FC = () => {
                         </a>
                     ))}
                     <div className="flex items-center space-x-4 ml-4 pl-4 border-l border-white/10">
-                        <a href="https://github.com/bharathkumar010101" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors"><Github size={20} /></a>
-                        <a href="https://linkedin.com/in/bharathkumar-utukuru" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors"><Linkedin size={20} /></a>
+                        <a href="https://github.com/bharathkumar39293" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors"><Github size={20} /></a>
+                        <a href="https://www.linkedin.com/in/bharath-kumar-utukuru-6ab491246/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors"><Linkedin size={20} /></a>
                     </div>
                 </div>
 
