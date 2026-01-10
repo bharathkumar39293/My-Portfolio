@@ -7,7 +7,7 @@ export const PROFILE = {
     phone: "8330960967",
     location: "India",
     linkedin: "https://www.linkedin.com/in/bharath-kumar-utukuru-6ab491246/",
-    github: "https://github.com/bharathkumar010101",
+    github: "https://github.com/bharathkumar39293",
     summary: "Full Stack Software Engineer with hands-on experience building and deploying production-scale web applications using React, Next.js, Node.js, Express, MongoDB, and RESTful APIs. Proven contributor to high-traffic applications serving 700,000+ users, with experience in role-based access control (RBAC), authentication, real-time systems, and scalable frontend architectures. Strong foundation in Data Structures & Algorithms, system optimization, and collaborative development using Git-based workflows."
 };
 
