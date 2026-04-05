@@ -1,4 +1,4 @@
-import { Globe, Cpu, Server, Terminal, Shield } from 'lucide-react';
+import { Globe, Cpu, Server, Shield } from 'lucide-react';
 
 export const PROFILE = {
     name: "Bharath Kumar",
