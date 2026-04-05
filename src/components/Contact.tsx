@@ -39,10 +39,15 @@ const Contact: React.FC = () => {
                     </div>
                 </div>
 
-                <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+                <form action="https://api.web3forms.com/submit" method="POST" className="space-y-4">
+                    {/* Replace this value with your actual Web3Forms access key! */}
+                    <input type="hidden" name="access_key" value="e4a6149e-81b2-4ae0-a674-81fe5c270ad2" />
+
                     <div>
                         <input
                             type="text"
+                            name="name"
+                            required
                             placeholder="Your Name"
                             className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder-slate-500"
                         />
@@ -50,6 +55,8 @@ const Contact: React.FC = () => {
                     <div>
                         <input
                             type="email"
+                            name="email"
+                            required
                             placeholder="Your Email"
                             className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder-slate-500"
                         />
@@ -57,6 +64,8 @@ const Contact: React.FC = () => {
                     <div>
                         <textarea
                             rows={4}
+                            name="message"
+                            required
                             placeholder="Message"
                             className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder-slate-500 resize-none"
                         ></textarea>

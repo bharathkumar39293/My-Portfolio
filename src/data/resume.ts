@@ -1,58 +1,64 @@
-import { Globe, Cpu, Server, Terminal } from 'lucide-react';
+import { Globe, Cpu, Server, Terminal, Shield } from 'lucide-react';
 
 export const PROFILE = {
-    name: "Utukuru Bharath Kumar",
-    role: "Full Stack Developer",
+    name: "Bharath Kumar",
+    role: "Systems & SDK Engineer",
     email: "Bharathkumar010101@gmail.com",
     phone: "8330960967",
     location: "India",
     linkedin: "https://www.linkedin.com/in/bharath-kumar-utukuru-6ab491246/",
     github: "https://github.com/bharathkumar39293",
-    summary: "Full Stack Software Engineer with hands-on experience building and deploying production-scale web applications using React, Next.js, Node.js, Express, MongoDB, and RESTful APIs. Proven contributor to high-traffic applications serving 700,000+ users, with experience in role-based access control (RBAC), authentication, real-time systems, and scalable frontend architectures. Strong foundation in Data Structures & Algorithms, system optimization, and collaborative development using Git-based workflows."
+    summary: "Systems & SDK Engineer obsessed with the \"invisible\" parts of software—race conditions, command queues, and distributed state. Most of my work is focused on making client-side SDKs bulletproof and ensuring background job infrastructure can handle failures gracefully. I am a core contributor to top-tier dev-tools like Formbricks and Trigger.dev, shipping fixes for high-stakes infrastructure bugs. Experienced in distributed orchestration (idempotency, retries) and telemetry (ClickHouse, OpenTelemetry)."
 };
 
 export const SKILLS = [
-    { category: "Frontend", items: ["React.js", "Next.js (App Router)", "JavaScript (ES6+)", "HTML5", "CSS3", "Tailwind CSS"], icon: Globe },
-    { category: "Backend", items: ["Node.js", "Express.js", "REST APIs", "Auth (RBAC)", "MongoDB", "SQL"], icon: Server },
-    { category: "Real-Time / Core", items: ["Socket.IO", "WebSockets", "Data Structures", "Algorithms", "Async Programming"], icon: Cpu },
-    { category: "Languages / Tools", items: ["Python", "C++", "Git", "GitHub", "Vercel", "Render", "CodeMirror"], icon: Terminal }
+    { category: "Infrastructure & Systems", items: ["Node.js", "PostgreSQL", "Redis", "ClickHouse", "OpenTelemetry", "Docker"], icon: Server },
+    { category: "SDK Reliability", items: ["Race Condition Debugging", "Idempotency", "Command Queues", "Fail-Open Architectures", "Error Handling"], icon: Shield },
+    { category: "Languages & Frameworks", items: ["TypeScript", "JavaScript (ES6+)", "Express.js", "React.js", "Next.js"], icon: Globe },
+    { category: "Core & Algorithms", items: ["Data Structures", "Sliding Window", "Async Programming", "System Architecture"], icon: Cpu }
 ];
 
 export const EXPERIENCE = [
     {
-        company: "Improved Tube | NexGen Studio Dev",
-        role: "Software Developer — Open source Contributor",
+        company: "Trigger.dev | Formbricks | Improved Tube | NexGen Studio Dev",
+        role: "Open Source Software Engineer & Core Contributor",
         period: "Oct 2025 – Present",
-        description: "Contributing to production web applications.",
+        description: "Focusing on SDK reliability, resolving complex race conditions, and contributing to production open-source applications reaching 700k+ users.",
         achievements: [
-            "Engineered a Playback Speed Button in Improved Tube’s core player UI, enabling instant speed control for 700k+ users; modified 8 core files with zero regressions and applied efficient algorithms for smooth performance.",
-            "Designed, implemented, and merged an Admin Role Management module for NexGen Studio Dev, enforcing role-based access control through protected routing and admin lifecycle management."
+            "Trigger.dev: Reconciled trace lifecycles with the run engine to mitigate ClickHouse lag in real-time telemetry (PR #2874).",
+            "Formbricks: Fixed SDK race conditions by preventing pre-init commands from permanently dropping during unstable initializations (PR #7226).",
+            "Formbricks: Implemented DoS attack mitigation by adding string-length validation to userId injections (PR #7378).",
+            "Formbricks: Debugged SDK error states and UI click-target matching, ensuring 0% data loss during data collection (PR #7202, #7327).",
+            "Improved Tube: Engineered a Playback Speed Button in the core player UI, enabling instant speed control for 700k+ users; modified 8 core files with zero regressions.",
+            "NexGen Studio Dev: Designed and implemented an Admin Role Management module enforcing RBAC."
         ],
         links: [
-            { label: "GitHub-1", url: "https://github.com/code-charity/youtube/pull/3202" },
-            { label: "GitHub-2", url: "https://github.com/NexGenStudioDev/ciitm-frontend/pull/245" }
+            { label: "Trigger.dev PRs", url: "https://github.com/triggerdotdev/trigger.dev/pulls?q=is%3Apr+author%3Abharathkumar39293" },
+            { label: "Formbricks PRs", url: "https://github.com/formbricks/formbricks/pulls?q=is%3Apr+author%3Abharathkumar39293" },
+            { label: "ImprovedTube PR", url: "https://github.com/code-charity/youtube/pull/3202" },
+            { label: "NexGen PR", url: "https://github.com/NexGenStudioDev/ciitm-frontend/pull/245" }
         ]
-    },
+    }
 ];
 
 export const PROJECTS = [
     {
+        title: "Rate Limiter SDK",
+        tech: ["TypeScript", "Redis", "PostgreSQL", "Express", "Docker"],
+        description: "Built a production-grade distributed Rate Limiting system and an accompanying Fail-Open Client SDK. Engineered a Sliding Window algorithm using Redis Sorted Sets to prevent burst attacks, and utilized asynchronous Postgres logging to offload metrics and preserve millisecond API response times.",
+        links: { demo: "https://rate-limiter-sdk.vercel.app/", github: "https://github.com/bharathkumar39293/Rate-Limiter-SDK" }
+    },
+    {
+        title: "WebhookDrop Queue Infrastructure",
+        tech: ["TypeScript", "Message Queues", "Workers", "Render", "Vercel"],
+        description: "Engineered an asynchronous message processing webhooks engine. Decoupled the ingestion API from the execution worker pool, allowing for reliable and scalable handling of third-party webhooks without synchronous processing delays.",
+        links: { github: "https://github.com/bharathkumar39293/WebHookDrop" }
+    },
+    {
         title: "Collaborative Code Editor",
         tech: ["React", "Node.js", "Socket.IO", "CodeMirror"],
-        description: "Real-time collaborative editor supporting multiple concurrent users. Implemented Socket.IO for room-based collaboration and user presence tracking. Added Syntax highlighting, live chat, multi-language support (C, C++, Java, Python) via Piston API.",
+        description: "Real-time collaborative editor supporting multiple concurrent users with room-based collaboration. Built language compilation via Piston API.",
         links: { demo: "https://collaborative-code-editor-puce.vercel.app/", github: "https://github.com/bharathkumar39293/collaborative-code-editor" }
-    },
-    {
-        title: "Resume Mate AI-Powered Resume Builder",
-        tech: ["React 18", "Node", "Express", "Redux", "MongoDB", "Generative AI"],
-        description: "Customizable resume templates with real-time preview. Integrated the Google Gemini API to generate AI-based resume summaries.",
-        links: { demo: "https://resume-mate-nu.vercel.app/", github: "https://github.com/bharathkumar39293/ResumeMate" }
-    },
-    {
-        title: "Campaign Management Dashboard",
-        tech: ["React", "API Design", "Data Visualization"],
-        description: "Built a campaign management dashboard with search, filtering, pagination, and bulk actions. Designed data models and APIs to compute and display performance metrics including CTR, CPC, CPA, impressions, and conversions. Optimized frontend rendering.",
-        links: { demo: "https://campaign-dashboard-psi.vercel.app/", github: "https://github.com/bharathkumar39293/campaign-dashboard" }
     }
 ];
 
